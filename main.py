@@ -3,9 +3,6 @@ class Cat:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-    def get_oldest_cat(*args):
-      return max(args)
-
 
 
 # Instantiate the Cat object with 3 cats
@@ -15,9 +12,11 @@ snickers = Cat("Snickers", 1)
 
 
 # Find the oldest cat
+def get_oldest_cat(*args):
+    return max(args)
+
+    #here function is outside so we can acces directly
 
 
 # Output
-print(f'The oldest cat is {Cat.get_oldest_cat(peanut.age, garfield.age, snickers.age)} years old.')
-
-#function inside class therefor Cat.(function)
+print(f"The oldest cat is {get_oldest_cat(peanut.age, garfield.age, snickers.age)} years old.")
