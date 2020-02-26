@@ -1,12 +1,23 @@
-#classes
+class Cat:
+    species = 'mammal'
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def get_oldest_cat(*args):
+      return max(args)
 
-class Player:
-  member = True #class object attribute (static)
-  def __init__(self,n):
-    self.n = n #attributes (dynamic)
-  def run(self):#method
-    print("kk")
 
-p1 = Player("Nikhath")
-print(p1.n)
-(p1.run())
+
+# Instantiate the Cat object with 3 cats
+peanut = Cat("Peanut", 3)
+garfield = Cat("Garfield", 5)
+snickers = Cat("Snickers", 1)
+
+
+# Find the oldest cat
+
+
+# Output
+print(f'The oldest cat is {Cat.get_oldest_cat(peanut.age, garfield.age, snickers.age)} years old.')
+
+#function inside class therefor Cat.(function)
