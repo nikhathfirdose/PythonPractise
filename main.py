@@ -1,15 +1,12 @@
-def highestEven(li):
-  even = []
-  for i in li:
-    if i%2 == 0:
-      even.append(i)
-  return max(even)
+#classes
 
-print(highestEven([1,2,3,45,-7,5,6,7778,8]))
+class Player:
+  member = True #class object attribute (static)
+  def __init__(self,n):
+    self.n = n #attributes (dynamic)
+  def run(self):#method
+    print("kk")
 
-#Exercise find highest even number
-
-
-
-
-#commit
+p1 = Player("Nikhath")
+print(p1.n)
+(p1.run())
