@@ -1,15 +1,18 @@
-#Exercise Cat 2nd Time
+#Inheritance
 
-class Cat:
-  def __init__(self,name,age):
-    self.name = name
-    self.age = age
+class User:
+  def sign():
+    return "Hi You're signed in"
+    
+class Wizard(User):
+  def log():
+    return "Login Now"
   
-  def Oldest(*args):
-    return max(args)
 
-c1 = Cat("pp", 8)
-c2 = Cat('oo',8)
-c3 = Cat("poil", 9)
+class Archer(Wizard):
+  pass
 
-print(f'the oldest is {Cat.Oldest(c1.age,c2.age,c3.age)} years old')
+w1 = Archer.sign()
+print(w1)  #as archer inherits wizard which inherits user that has the sign method. it still works on Archer
+
+#this totatlly works. Awesome!
