@@ -1,18 +1,35 @@
-#Inheritance
+#Polymorphism
 
 class User:
   def sign():
-    return "Hi You're signed in"
-    
+    return "hoolaaa"
 class Wizard(User):
-  def log():
-    return "Login Now"
-  
+  def __init__(self, name):
+    self.name= name
 
-class Archer(Wizard):
-  pass
+  def attack(self):
+    print(f'with wizard arrows {self.name}')
 
-w1 = Archer.sign()
-print(w1)  #as archer inherits wizard which inherits user that has the sign method. it still works on Archer
 
-#this totatlly works. Awesome!
+class Archer(User):
+  def __init__(self, name):
+    self.name= name
+
+  def attack(self):
+    print(f'with archer arrows {self.name}')
+
+w1 = Wizard("Noonn")
+a1 = Archer("lol")
+#1st method to call the attacks
+w1.attack()
+a1.attack()
+
+#2nd method
+def use_attack(c):
+  c.attack()
+use_attack(w1)
+use_attack(a1)
+
+#3rd method
+for c in [w1, a1]:
+  c.attack()
