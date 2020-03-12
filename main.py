@@ -1,35 +1,40 @@
-#Polymorphism
+#exercise pets again 
+class Pets():
+    animals = [] #class atrribute == static
+    def __init__(self, animals):
+        self.animals = animals
 
-class User:
-  def sign():
-    return "hoolaaa"
-class Wizard(User):
-  def __init__(self, name):
-    self.name= name
+    def walk(self):
+        for animal in self.animals:
+            print(animal.walk())
 
-  def attack(self):
-    print(f'with wizard arrows {self.name}')
+class Cat(): ##
+    is_lazy = True
 
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-class Archer(User):
-  def __init__(self, name):
-    self.name= name
+    def walk(self):
+        return f'{self.name} is just walking around'
 
-  def attack(self):
-    print(f'with archer arrows {self.name}')
+class Simon(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
 
-w1 = Wizard("Noonn")
-a1 = Archer("lol")
-#1st method to call the attacks
-w1.attack()
-a1.attack()
+class Sally(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
 
-#2nd method
-def use_attack(c):
-  c.attack()
-use_attack(w1)
-use_attack(a1)
+class Pete(Cat):
+    def sing(self, sounds):
+      return f'{sounds}'
 
-#3rd method
-for c in [w1, a1]:
-  c.attack()
+#1 Add nother Cat
+
+#2 Create a list of all of the pets (create 3 cat instances from the above)
+my_cats = []
+
+#3 Instantiate the Pet class with all your cats use variable my_pets
+
+#4 Output all of the cats walking using the my_pets instance
