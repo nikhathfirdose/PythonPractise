@@ -8,7 +8,7 @@ class Pets():
         for animal in self.animals:
             print(animal.walk())
 
-class Cat(): 
+class Cat(): #push
     is_lazy = True
 
     def __init__(self, name, age):
