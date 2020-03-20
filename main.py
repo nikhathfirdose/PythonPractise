@@ -1,24 +1,21 @@
-#exercise on cmprehensions
+# Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+user1 = {
+    'name': 'Sorna',
+    'valid': True #changing this will either run or not run the message_friends function.
+}
 
-li = ["a", "b", "c", "b", "d", "n", "m", "n"]
-duplicates = [c for c in li if li.count(c)>1]
-chars = set(duplicates)
-print("Duplicates = " , list(chars))
-
-#decorators
-from time import time
-
-def performance(fn):
+def authenticated(fn):
   def wrapper(*args, **kwargs):
-    t1 = time()
-    result = fn(*args, **kwargs)
-    t2 = time()
-    print(t2-t1)
-    return result
+    if args[0]['valid']:
+      print(args[0]['name']) #[0] gives the first argument user1
+      res =fn(*args, **kwargs)
+      return res
   return wrapper
 
-@performance
-def looo():
-  for i in range (10000000):
-    i
-looo()
+
+
+@authenticated
+def message_friends(user):
+    print('message has been sent')
+
+message_friends(user1)
