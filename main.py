@@ -1,20 +1,24 @@
-#list comprehensions
-li = [i for i in range(0,100) if i%2==0]
-print(li)
+#exercise on cmprehensions
 
-#set - same as lists
-si = { i for i in [1,2,3,3,6,33,4]}
-print(si)
+li = ["a", "b", "c", "b", "d", "n", "m", "n"]
+duplicates = [c for c in li if li.count(c)>1]
+chars = set(duplicates)
+print("Duplicates = " , list(chars))
 
-#dict comprehensions
-sample = {
-  "a":5,
-  "b": 6
-}
-new_d = {k:v**2 for k,v in sample.items()}
-print(new_d)
+#decorators
+from time import time
 
+def performance(fn):
+  def wrapper(*args, **kwargs):
+    t1 = time()
+    result = fn(*args, **kwargs)
+    t2 = time()
+    print(t2-t1)
+    return result
+  return wrapper
 
-#dict copre hension by just using key
-dics = { k: k*2 for k in [1,2,3]}
-print(dics)
+@performance
+def looo():
+  for i in range (10000000):
+    i
+looo()
