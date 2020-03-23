@@ -100,6 +100,6 @@ def factor(number):
     if check_prime(j):
       p.append(j)
   return p
-
+#randommmss
 print(factor(600))
 print(factor(600))
