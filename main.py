@@ -12,7 +12,7 @@ def authenticated(fn):
       return res
   return wrapper
 
-
+#committ
 
 @authenticated
 def message_friends(user):
