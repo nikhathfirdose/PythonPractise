@@ -1,1 +1,2 @@
-from ErrorHandle import *
+# from ErrorHandle import *
+from Generator import *
