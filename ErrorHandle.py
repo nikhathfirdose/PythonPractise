@@ -10,6 +10,7 @@ while (True):
     print("visiblr?")
 
 
-    commit push commit 
+    commit push 
     
+
 
