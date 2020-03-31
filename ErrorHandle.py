@@ -10,6 +10,6 @@ while (True):
     print("visiblr?")
 
 
-    commit push commit pysh
-
+    commit push commit 
     
+
